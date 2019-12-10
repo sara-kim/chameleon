@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <title>카멜레온시네마</title>
+    <title>빠른예매 : 예매 : 카멜레온시네마</title>
     <link rel="stylesheet" href="../asset/css/common.css">
     <link rel="stylesheet" href="../asset/css/kmj.css">
+    <link rel="stylesheet" href="css/featherlight.min.css">
+    <link rel="icon" href="../asset/images/common/chamelieon.ico">
     <!--[if lt IE 9]>
         <script src="js/html5shiv.min.js"></script>
     <![endif]-->
@@ -13,7 +15,12 @@
     <script src="../asset/js/jquery.bxslider.min.js"></script>
     <script src="../asset/js/tab.js"></script>
     <script src="../asset/js/common.js"></script>
-
+    <script src="../asset/js/featherlight.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.modal2').featherlight();
+        });
+    </script>
 </head>
 
 <body>
@@ -43,7 +50,8 @@
                     <li><a href="../movie/recently.html">영화</a></li>
                     <li><a href="../cinema/c_finder.html">영화관</a></li>
                     <li><a href="">이벤트</a></li>
-                    <li class="all_Menu"><a href="#sitemap"><img src="../asset/images/common/icon_menu.gif" alt="전체메뉴보기"></a></li>
+                    <li class="all_Menu"><a href="#sitemap"><img src="../asset/images/common/icon_menu.gif"
+                                alt="전체메뉴보기"></a></li>
                 </ul>
             </nav>
         </div>
@@ -133,17 +141,66 @@
             <h2>예매</h2>
             <ul class="r_quick">
                 <li class="sub_select"><a href="">빠른예매</a></li>
-                <li ><a href="">미개봉 선예매</a></li>
+                <li><a href="">미개봉 선예매</a></li>
                 <li><a href="">예매확인</a></li>
             </ul>
         </div>
-        <div id="reserve_quick">
-        
+        <div id="reserve_quick" class="po_absol">
+            <div class="r_select">
+            </div>
+            <div class="r_poster_box">
+                <ul>
+                    <li class="over fl_left po_relat">
+                        <img src="../asset/images/main/movie_poster1.jpg" alt="">
+                        <div class="po_absol boder_bx">
+                            <strong>나이브스 아웃</strong>
+                            <p>12세 관람가</p>
+                            <a href="" class="">예매하기</a>
+                            <a href="" class="">상세보기</a>
+                        </div>
+                    </li>
+                    <li class="over fl_left po_relat">
+                        <img src="../asset/images/main/movie_poster2.jpg" alt="">
+                        <div class="po_absol boder_bx">
+                            <strong>겨울왕국 2</strong>
+                            <p>전체연령가</p>
+                            <a href=".r_mdcnt2" class="link modal2" role="button">예매하기</a>
+                            <a href="" class="" >상세보기</a>
+                        </div>
+
+                        <div class="r_mdcnt2 r_md">
+                            <img src="../asset/images/reserve/frozen_poster_modal.jpg" alt="">
+                        </div>
+                    </li>
+                    <li class="over fl_left po_relat">
+                        <img src="../asset/images/main/movie_poster3.jpg" alt="">
+                        <div class="po_absol boder_bx">
+                            <strong>굿 라이어</strong>
+                            <p>15세 관람가</p>
+                            <a href="" class="">예매하기</a>
+                            <a href="" class="">상세보기</a>
+                        </div>
+                    </li>
+                    <li class="over fl_left po_relat">
+                        <img src="../asset/images/main/movie_poster4.jpg" alt="">
+                        <div class="po_absol boder_bx">
+                            <strong>말레피센트 2</strong>
+                            <p>12세 관람가</p>
+                            <a href="" class="">예매하기</a>
+                            <a href="" class="">상세보기</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a class="r_left po_absol" href="" type="button"></a></li>
+                    <li><a class="r_right po_absol" href="" type="button"></a></li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <div class="wid1920">
-        <footer id="footer">
+        <footer id="footer" class="r_footer">
             <div class="footerbox">
                 <h1 class="logo">
                     <a href="">

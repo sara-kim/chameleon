@@ -239,7 +239,7 @@
                             <input type="text" name="phone" id="phone3" title="연락처 마지막4자리" maxlength="4">
                         </td>
                         <th scope="row" id="quesEmail">
-                            이메일
+                            <label for="email">이메일</label>
                         </th>
                         <td headers="quesEmail">
                             <input type="text" name="email" id="email">
@@ -248,29 +248,39 @@
                     <tr>
                         <th scope="row" id="quesBranch">문의지점</th>
                         <td colspan="3" headers="quesBranch">
-                            <input type=radio value="지점문의" name="question" id="branch" checked><label
-                                for="branch">지점문의</label>
+                            <input type=radio value="지점문의" name="question" id="branch" checked><label for="branch">지점문의</label>
                             <input type=radio value="기타문의" name="question" id="etc"><label for="etc">기타문의</label>
-                            <select name="selArea" id="selArea">
-                                <option value="지역선택">지역선택</option>
-                                <option value="서울">서울</option>
-                                <option value="경기">경기</option>
-                                <option value="인천">인천</option>
-                                <option value="충청">충청</option>
-                                <option value="강원">강원</option>
-                                <option value="경상">경상</option>
-                                <option value="전라">전라</option>
-                            </select>
-                            <select name="selCinema" id="selCinema">
-                                <option value="지점선택">지점선택</option>
-                                <option value="강남">강남</option>
-                                <option value="강변">강변</option>
-                                <option value="건대입구">건대입구</option>
-                                <option value="구로">구로</option>
-                                <option value="대학로">동대문</option>
-                                <option value="등촌">등촌</option>
-                                <option value="목동">목동</option>
-                            </select>
+                            
+                            <div class="selAreaWrap po_relat">
+                                <button class="areaBtn" type="button">
+                                    <span>지역선택</span>
+                                </button>
+                                <ul class="selArea po_absol ulBtn">
+                                    <li><button type="button">서울</button></li>
+                                    <li><button type="button">경기</button></li>
+                                    <li><button type="button">인천</button></li>
+                                    <li><button type="button">충청</button></li>
+                                    <li><button type="button">강원</button></li>
+                                    <li><button type="button">경상</button></li>
+                                    <li><button type="button">전라</button></li>
+                                </ul>
+                            </div>
+                            <div class="selAreaWrap po_relat">
+                                <button class="cinemaBtn" type="button">
+                                    <span>지점선택</span>
+                                </button>
+                                <ul class="selCinema po_absol ulBtn">
+                                    <li><button type="button">강남</button></li>
+                                    <li><button type="button">강변</button></li>
+                                    <li><button type="button">건대입구</button></li>
+                                    <li><button type="button">구로</button></li>
+                                    <li><button type="button">동대문</button></li>
+                                    <li><button type="button">등촌</button></li>
+                                    <li><button type="button">목동</button></li>
+                                </ul>
+
+                            </div>
+
                         </td>
                     </tr>
                     <tr>
