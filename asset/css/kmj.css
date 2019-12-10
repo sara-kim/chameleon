@@ -14,13 +14,14 @@
 #sub_m_tit .r_quick li+li{ color: #aaa;}
 #sub_m_tit ul li,.featherlight-content .md a,#ms_box ul li, #ms_box .ms_h_txt.on ,#reserve_quick .r_poster_box ul li div,#reserve_quick .r_poster_box  ul li div a,#reserve_quick .r_poster_box .r_left,#reserve_quick .r_poster_box .r_right {-webkit-transition: all 0.5s;-moz-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;}
 #sub_m_tit .r_quick.sub_select {color: #eb651e;border-color: #eb651e;}
-#ms_box ul li ,#reserve_quick .r_poster_box ul li div,#reserve_quick .r_select div ul {box-shadow: 0px 0px 10px rgba(0,0,0,0.12);}
+#ms_box ul li ,#reserve_quick .r_poster_box ul li div,#reserve_quick .r_select div ul,.featherlight-content .r_md .r_ticket  {box-shadow: 0px 0px 10px rgba(0,0,0,0.12);}
+#reserve_quick .r_select div ul ,.featherlight-content .r_md .r_ticket{background: #ffffff;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;}
 
 
 /* membership */
 #m_ship{ top: 300px;width: 1200px; height: 1100px;}
 #m_ship .top_txt { text-align: left; margin-top: 20px;margin-bottom: 65px;}
-#m_ship .top_txt strong { color: #eb641e; font-family:Josefin; font-weight: 700; font-size: 24px;}
+#m_ship .top_txt strong { color: #eb651e; font-family:Josefin; font-weight: 700; font-size: 24px;}
 #m_ship .top_txt p {padding-top: 26px; font-size: 16px; color: #555555; line-height: 1.63;}
 #ms_box>ul>li{margin-right: 50px;margin-bottom: 70px; width: 550px; height: 320px; float: left; }
 #ms_box>ul>li:nth-child(1){margin: none;}
@@ -81,6 +82,15 @@
 
 /* modal */
 .r_md{ display: none;}
+.featherlight-content .r_md img{margin-left: -25px;margin-top: -25px;}
+.featherlight-content .r_md img:nth-child(1) {position: absolute; top: 50px; left: 50px;}
+.featherlight-content .r_md h6 { color: #eb651e; font-size: 25px;text-align: center;margin: 15px auto;}
+.featherlight-content .r_md h6:after{ content:"";position: absolute;left: 0;top: 420px;width: 700px; height: 1px;background: #dddddd;}
+.featherlight-content .r_md .r_ticket{ margin-top: 70px;width: 184px; height: 264px;background: #ffffff;}
+.featherlight-content .r_md .r_select_btn {margin-left: -25px;}
+.featherlight-content .r_md .r_select_btn a{display: inline-block;width: 350px; height: 70px; font-size: 20px;font-weight: 500; text-align: center;line-height: 70px;color: #aaaaaa;}
+.featherlight-content .r_md .r_select_btn a:first-child {bottom: 0;left: 0;background: #ffffff; border-top: 1px solid #aaa;}
+.featherlight-content .r_md .r_select_btn .r_seat {bottom: 0;right: 0;background: #eb651e;right: 0;color: #ffffff;}
 
 
 /* scroll */
@@ -89,6 +99,5 @@
 #reserve_quick .r_select .r_cinema {left: 131px;width: 277px;}
 #reserve_quick .r_select .r_number {right: 310px;width: 125px;}
 #reserve_quick .r_select .r_date{right: 167px;width: 125px;}
-#reserve_quick .r_select div ul {background: #ffffff;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;}
 #reserve_quick .r_select .r_number ul li ,#reserve_quick .r_select .r_date ul li{ content:""; border-bottom: 1px solid #f1f1f1; }
 #reserve_quick .r_select .r_number ul {width: 58px;height: 295px;}
