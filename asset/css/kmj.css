@@ -14,7 +14,8 @@
 #sub_m_tit .r_quick li+li{ color: #aaa;}
 #sub_m_tit ul li,.featherlight-content .md a,#ms_box ul li, #ms_box .ms_h_txt.on ,#reserve_quick .r_poster_box ul li div,#reserve_quick .r_poster_box  ul li div a,#reserve_quick .r_poster_box .r_left,#reserve_quick .r_poster_box .r_right {-webkit-transition: all 0.5s;-moz-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;}
 #sub_m_tit .r_quick.sub_select {color: #eb651e;border-color: #eb651e;}
-#ms_box ul li ,#reserve_quick .r_poster_box ul li div {box-shadow: 0px 0px 10px rgba(0,0,0,0.12);}
+#ms_box ul li ,#reserve_quick .r_poster_box ul li div,#reserve_quick .r_select div ul {box-shadow: 0px 0px 10px rgba(0,0,0,0.12);}
+
 
 /* membership */
 #m_ship{ top: 300px;width: 1200px; height: 1100px;}
@@ -43,8 +44,10 @@
 
 /* membership modal */
 .md {display: none;}
+
 .featherlight .featherlight-content{width: 700px; height: 1000px; margin: 0;padding: 0;overflow: hidden;}
 .featherlight .featherlight-close-icon{top: 50px; right: 50px;width: 22px;line-height: 22px; font-size: 35px; color: #ffffff;background:none;}
+
 .featherlight-content .md { position: relative;text-align: center; margin: 0;padding: 0;}
 .featherlight-content .md p{ padding-top: 70px;padding-bottom: 10px;left: -10px;}
 .featherlight-content .md strong { font-family:Josefin; font-weight: 700; font-size: 35px; color: #eb651e;}
@@ -57,7 +60,7 @@
 
 /* reserve quick */
 #reserve_quick {width: 1200px; height: 900px;top: 260px;}
-#reserve_quick .r_select {height: 100px;margin-bottom: 110px;background: pink;}
+#reserve_quick .r_select {height: 80px;margin-bottom: 110px;border-bottom: 1px solid #ddd;}
 #reserve_quick .r_poster_box ul li {width: 270px; height: 400px; color: #ffffff;}
 #reserve_quick .r_poster_box ul li + li { margin-left: 40px;}
 #reserve_quick .r_poster_box ul li div {height: 400px; padding-top: 111px; top: 0; left: 0px; background: rgba(0,0,0,0);text-align: center;z-index: 400;}
@@ -70,11 +73,22 @@
 #reserve_quick .r_poster_box  ul li div { opacity: 0;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';}
 #reserve_quick .r_poster_box  ul li:hover div { opacity: 1;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';}
 #reserve_quick .r_poster_box ul li ul li {width: 55px; height: 55px;}
-#reserve_quick .r_poster_box .r_left{top: 700px;left: 0;width: 52px;height: 52px; background:url("../images/reserve/btn_prev_round.gif") no-repeat;}
-#reserve_quick .r_poster_box .r_left:hover {top: 700px;left: 0;width: 51px;height: 51px; background:url("../images/reserve/btn_prev_round_hover.png") no-repeat;}
-#reserve_quick .r_poster_box .r_right{top: 700px;right: 1px;width: 52px;height: 52px; background:url("../images/reserve/btn_next_round.gif") no-repeat;}
-#reserve_quick .r_poster_box .r_right:hover{top: 700px;right: 0;width: 51px;height: 51px; background:url("../images/reserve/btn_next_round_hover.png") no-repeat;}
+
+#reserve_quick .r_poster_box .r_left { top: 700px;left: 0; width: 51px;height: 51px;border: 2px solid #ddd;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;background: url("../images/reserve/btn_prev_round.gif") no-repeat -11px;}
+#reserve_quick .r_poster_box .r_left:hover {border-color: #eb651e;background: url("../images/reserve/btn_prev_round_hover.gif") no-repeat -11px;}
+#reserve_quick .r_poster_box .r_right { top: 700px;right: 0; width: 51px;height: 51px;border: 2px solid #ddd;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;background: url("../images/reserve/btn_next_round.gif") no-repeat 9px;}
+#reserve_quick .r_poster_box .r_right:hover {border-color: #eb651e;background: url("../images/reserve/btn_next_round_hover.gif") no-repeat 9px;}
 
 /* modal */
 .r_md{ display: none;}
 
+
+/* scroll */
+#reserve_quick .r_select { text-align: center; z-index: 700;}
+#reserve_quick .r_select div {top: 16px; height: 47px;-webkit-border-radius: 50px;-moz-border-radius: 50px;border-radius: 50px;line-height: 47px; background: #f1f1f1;}
+#reserve_quick .r_select .r_cinema {left: 131px;width: 277px;}
+#reserve_quick .r_select .r_number {right: 310px;width: 125px;}
+#reserve_quick .r_select .r_date{right: 167px;width: 125px;}
+#reserve_quick .r_select div ul {background: #ffffff;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;}
+#reserve_quick .r_select .r_number ul li ,#reserve_quick .r_select .r_date ul li{ content:""; border-bottom: 1px solid #f1f1f1; }
+#reserve_quick .r_select .r_number ul {width: 58px;height: 295px;}
