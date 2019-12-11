@@ -16,6 +16,7 @@ input[type="file"]
 {
     background : none;
 }
+
 /* FAQ 시작 */
 #subpage_content
 {
@@ -456,13 +457,203 @@ input[type="file"]
     line-height : 98px;
     padding : 0px 119px;
     text-align : center;
-    border-top : 1px solid #828282;
-    border-bottom : 1px solid #828282;
+    font-size : 20px;
+    border-top : 1px solid #ccc;
+    border-bottom : 1px solid #ccc;
+    margin-bottom : 70px;
 }
 #cinemaTab .tablist li
 {
     float : left;
     width : 137px;
+    height : 100px;
     cursor : pointer;
+}
+#cinemaTab .tablist li + li
+{
+    /* border-left : 1px solid #ccc; */
+}
+#cinemaTab .tablist li:hover,
+#cinemaTab .tablist li:focus
+{
+    color : #eb651e;
+    font-weight : 600;
+}
+#cinemaTab .tabpanel
+{
+    height : 230px;
+    margin-bottom : 70px;
+}
+#cinemaTab .tabpanel ul
+{
+    height : 30px;
+    line-height : 30px;
+    font-size : 18px;
+    padding : 0px 119px 70px;
+    text-align : center;
+}
+#cinemaTab .tabpanel ul:last-child
+{
+    padding-bottom : 0px;
+}
+#cinemaTab .tabpanel ul li
+{
+    float : left;
+    width : 137px;
+}
+#cinemaTab .tabpanel ul li a:hover,
+#cinemaTab .tabpanel ul li a:focus,
+#cinemaTab .tab.active
+{
+    color : #eb651e;
+}
+
+#cinemaTab .tabpanel
+{
+    display :none;
+}
+#cinemaTab .tabpanel.active
+{
+    display :block;
+}
+
+
+#c_finder_cnt2
+{
+    margin-bottom : 70px;
+}
+#c_finder_cnt2 .cnt2
+{
+    height : 975px;
+    background : url("../images/cinema/cinema1.png") no-repeat center top;
+}
+#c_finder_cnt2 .cnt2 #opaBox
+{
+    position : absolute;
+    left : 0px;
+    bottom : 0px;
+    width : 100%;
+    height : 250px;
+    background : rgba(0,0,0,0.5);
+    font-size : 40px;
+    color : #fff;
+}
+#opaBox .opaTxt
+{
+    padding : 50px 0px 50px 26px;
+}
+#opaBox .opaTxt a
+{
+    display : inline-block;
+    font-size : 20px;
+    width : 180px;
+    height : 40px;
+    line-height : 38px;
+    text-align : center;
+
+}
+#opaBox .opaTxt a:last-child
+{
+    margin-left : 30px;
+}
+#opaBox .opaTxt a:hover,
+#opaBox .opaTxt a:focus
+{
+    border : 1px solid #fff;
+    border-radius : 4px;
+}
+#opaBox .opaTxt a
+{
+    transition : all 0.5s;
+}
+
+.timeTable h2
+{
+    padding-bottom : 80px;
+}
+
+.timeTable .printDate
+{
+    padding-left : 56px;
+    font-size : 30px;
+}
+.timeTable .printDate:before
+{
+    content : "";
+}
+.timeTable .printDate:after
+{
+    content : "";
+}
+#mvListArea
+{
+    height : 417px;
+    background : pink;
+}
+#mvListArea > div
+{
+    float : left;
+}
+#mvListArea .mvInfo
+{
+    width : 442px;
+    height : 134px;
+    vertical-align : middle;
+    padding : 84px 0px 0px 52px;
+}
+#mvListArea .mvInfo img
+{
+    vertical-align : middle;
+}
+#mvListArea .mvInfo > h3
+{
+    height : 50px;
+    line-height : 50px;
+}
+#mvListArea .mvInfo h3
+{
+    display : inline-block;
+    padding-left : 30px;
+    width : 150px;
+
+}
+#mvListArea .mvInfo div
+{
+    display : inline-block;
+    height : 50px;
+    width : 80px;
+}
+#mvListArea .mvTime
+{
+    width : 758px;
+    height : 417px;
+    padding : 96px 29px 96px 36px;
+}
+#mvListArea .mvTime ul
+{
+    height : 78px;
+    text-align : center;
+}
+#mvListArea .mvTime ul+ul
+{
+    padding-top : 67px;
+}
+#mvListArea .mvTime ul li
+{
+    float : left;
+}
+#mvListArea .mvTime ul li+li
+{
+    padding-left : 60px;
+}
+#mvListArea .mvTime ul li a
+{
+    display : block;
+    width : 78px;
+}
+#mvListArea .mvTime ul li a span
+{
+    display : block;
+    font-size : 20px;
 }
 /* c_finder 종료 */
