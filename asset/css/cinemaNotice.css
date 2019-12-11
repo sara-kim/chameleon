@@ -6,7 +6,16 @@
 {
     background-position-y : -100px !important;
 }
-
+button
+{
+    text-align : left;
+    color : inherit;
+    font-weight : inherit;
+}
+input[type="file"]
+{
+    background : none;
+}
 /* FAQ 시작 */
 #subpage_content
 {
@@ -25,7 +34,8 @@
 {
     border-bottom : 1px solid #333;
 }
-#faq h2.txt_cen
+
+#location_bar + h2.txt_cen
 {
     height : 80px;
     line-height : 80px;
@@ -159,8 +169,7 @@
     height : 49px;
     border-bottom : 1px solid #eee;
 }
-#boardArea .boardList > a:hover .boardHead3,
-#boardArea .boardList > a:focus .boardHead3
+#boardArea .boardList > a:hover .boardHead3
 {
     color : #eb651e;
 }
@@ -288,7 +297,7 @@
 {
     width : 1200px;
     font-size : 20px;
-    
+    margin-bottom : 80px;
 }
 #quesForm tr
 {
@@ -337,23 +346,32 @@
 {
     margin-left : 50px;
 }
-#quesForm .selAreaWrap > button
+#quesForm .selAreaWrap > button,
+#quesForm .quesType > button
 {
     width : 140px;
     height : 40px;
     line-height : 38px;
     border : 1px solid #333;
-    border-radius : 8px;
-    background : pink;
     padding-left : 12px;
-    text-align : left;
 }
-
-#quesForm .selAreaWrap .selArea
+#quesForm .selAreaWrap > button:hover,
+#quesForm .selAreaWrap > button:focus,
+#quesForm .quesType > button:hover,
+#quesForm .quesType > button:focus
+{
+    -webkit-border-radius : 8px;
+    -moz-border-radius : 8px;
+    border-radius : 8px;
+}
+#quesForm .selAreaWrap .selArea,
+#quesForm .selAreaWrap .selCinema,
+#quesForm .quesType .selType
 {
     display : none;
 }
-#quesForm .selAreaWrap li
+#quesForm .selAreaWrap li,
+#quesForm .quesType .selType li
 {
     padding-left : 20px;
     background : #fff;
@@ -361,9 +379,90 @@
     width : 140px;
     height : 40px;
     line-height : 38px;
+    -webkit-box-sizing : border-box;
+    -moz-box-sizing : border-box;
+    box-sizing : border-box;
+
 }
-#quesForm .selAreaWrap .selCinema
+#quesForm .selAreaWrap li button
 {
-    
+    width : 140px;
 }
+
+#quesForm .selAreaWrap button .triangle:after,
+#quesForm .quesType button .triangle:after
+{
+    content : "";
+    position : absolute;
+    z-index : 200;
+    right : 10px;
+    top : 16px;
+    border-top : 10px solid #aaa;
+    border-left : 8px solid transparent;
+    border-right : 8px solid transparent;
+}
+#quesForm .selAreaWrap button.active .triangle:after,
+#quesForm .quesType.active button .triangle:after
+{
+    -webkit-transform : rotate(180deg);
+    -moz-transform : rotate(180deg);
+    -o-transform : rotate(180deg);
+    -ms-transform : rotate(180deg);
+    transform : rotate(180deg);
+}
+#quesForm .quesType
+{
+    display : inline-block;
+    /* height : 40px;
+    overflow: hidden; */
+}
+#quesForm .quesType .selType li
+{
+    padding-left : 15px;
+}
+#quesForm #quesTit
+{
+    width : 100%;
+}
+#quesForm #quesTarea
+{
+    width : 100%;
+}
+#quesForm input[type="submit"]
+{
+    width : 100px;
+    color : #fff;
+    background : #eb651e;
+}
+/* transition */
+#quesForm .selAreaWrap > button,
+#quesForm .quesType > button,
+#quesForm .selAreaWrap button .triangle:after,
+#quesForm .quesType button .triangle:after
+{
+    -webkit-transition : all 0.5s;
+    -moz-transition : all 0.5s;
+    -o-transition : all 0.5s;
+    transition : all 0.5s;
+}
+
 /* question 종료 */
+
+/* c_finder 시작 */
+#cinemaTab .tablist
+{
+    width : 100%;
+    height : 100px;
+    line-height : 98px;
+    padding : 0px 119px;
+    text-align : center;
+    border-top : 1px solid #828282;
+    border-bottom : 1px solid #828282;
+}
+#cinemaTab .tablist li
+{
+    float : left;
+    width : 137px;
+    cursor : pointer;
+}
+/* c_finder 종료 */
