@@ -571,24 +571,60 @@ input[type="file"]
 {
     padding-bottom : 80px;
 }
-
+.timeTable .printDate button img,
+.timeTable .printDate span
+{
+    vertical-align : middle;
+}
 .timeTable .printDate
 {
     padding-left : 56px;
+}
+.timeTable .printDate > button:nth-child(1)
+{
+    /* padding-right : 30px; */
+}
+.timeTable .printDate .pDate
+{
     font-size : 30px;
+    padding : 0px 15px;
 }
-.timeTable .printDate:before
+.timeTable .printDate button:nth-child(2),
+.timeTable .printDate button:nth-child(3)
 {
-    content : "";
+    width : 50px;
+    height : 50px;
 }
-.timeTable .printDate:after
+.timeTable #calendar
 {
-    content : "";
+    display :none;
+    width : 200px;
+    text-align : center;
+    top : -224px;
 }
+.timeTable #calendar tr
+{
+    background : rgb(249, 249, 249);
+}
+.timeTable #calendar thead tr:first-child
+{
+    height: 50px;
+}
+.timeTable #calendar tr th,
+.timeTable #calendar tr th img
+{
+    vertical-align : middle;
+}
+.timeTable #calendar tr td
+{
+    cursor : pointer;
+}
+
 #mvListArea
 {
-    height : 417px;
-    background : pink;
+    height : 415px;
+    border-top : 1px solid #ddd; 
+    border-bottom : 1px solid #ddd;
 }
 #mvListArea > div
 {
@@ -597,9 +633,12 @@ input[type="file"]
 #mvListArea .mvInfo
 {
     width : 442px;
-    height : 134px;
-    vertical-align : middle;
+    height : 417px;
     padding : 84px 0px 0px 52px;
+}
+#mvListArea .mvInfo > *
+{
+    vertical-align: middle;
 }
 #mvListArea .mvInfo img
 {
@@ -607,6 +646,7 @@ input[type="file"]
 }
 #mvListArea .mvInfo > h3
 {
+    font-weight : 500;
     height : 50px;
     line-height : 50px;
 }
@@ -615,19 +655,29 @@ input[type="file"]
     display : inline-block;
     padding-left : 30px;
     width : 150px;
-
+    font-size : 20px;
 }
 #mvListArea .mvInfo div
 {
     display : inline-block;
     height : 50px;
     width : 80px;
+    text-align : center;
+}
+#mvListArea .mvInfo div p
+{
+    font-size : 20px;
+    height : 30px;
+}
+#mvListArea .mvInfo .room span
+{
+    
 }
 #mvListArea .mvTime
 {
     width : 758px;
     height : 417px;
-    padding : 96px 29px 96px 36px;
+    padding : 80px 29px 96px 36px;
 }
 #mvListArea .mvTime ul
 {
@@ -650,6 +700,11 @@ input[type="file"]
 {
     display : block;
     width : 78px;
+}
+#mvListArea .mvTime ul li a:hover,
+#mvListArea .mvTime ul li a:focus
+{
+    color : #eb651e;
 }
 #mvListArea .mvTime ul li a span
 {

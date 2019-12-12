@@ -87,7 +87,7 @@
 .featherlight-content .r_md h6:after{ content:"";position: absolute;left: 0;top: 420px;width: 200px; height: 3px;background: #eb651e;margin-left: 250px;}
 .featherlight-content .r_md ul li {float: left;}
 .featherlight-content .r_md .r_ticket{ margin-top: 60px;margin-left: 35px;width: 184px; height: 264px;background: #ffffff;padding: 0; color: #333333;}
-.featherlight-content .r_md .r_ticket .r_t_top {margin: 10px 10px;font-size: 11px;}
+.featherlight-content .r_md .r_ticket .r_t_top {margin: 15px 10px;font-size: 11px;}
 .featherlight-content .r_md .r_ticket .r_t_bottom {width: 140px; height: 200px;margin: 50px 10px 0 20px;}
 .featherlight-content .r_md .r_ticket .r_t_bottom strong {font-size: 25px; font-weight: 500;padding-bottom: 30px;}
 .featherlight-content .r_md .r_ticket .r_t_bottom strong:after { content:"";position: absolute;top:-7px;left: -15px; width: 170px;height: 1px;background: #333333;}
@@ -121,7 +121,7 @@
 #reserve_quick .r_select .r_number ul li ,#reserve_quick .r_select .r_date ul li{border-bottom: 1px solid #f1f1f1;}
 #reserve_quick .r_select ul li:hover { font-weight: 700;}
 #reserve_quick .r_select .r_number ul {width: 58px;height: 295px;margin-left: 35px;}
-#reserve_quick .r_select .r_date ul ,#reserve_quick .r_select .r_number ul{ display: none;}
+#reserve_quick .r_select .r_date ul ,#reserve_quick .r_select .r_number ul,#reserve_quick .r_select .r_cinema .r_c { display: none;}
 #reserve_quick .r_select .r_date .r_arrow ,#reserve_quick .r_select .r_number .r_arrow{top: 20px;left: 90px; fill: #eb651e;}
 #reserve_quick .r_select .r_cinema .r_c {width: 600px; height: 300px;background: #ffffff;}
 #reserve_quick .r_select .r_cinema .r_c  .r_c_top .r_c_tit {font-size: 15px;color: #eb651e; font-family:Josefin; font-weight: 500; float: left;margin: 15px 0 0 27px;}

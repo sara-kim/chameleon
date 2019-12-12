@@ -222,13 +222,40 @@ $(document).ready(function()
     // Calendar 종료
 
     //모달
-    $('.modal').featherlight();
     $('.modal2').featherlight();
 
-    //상단 select cinema
+   //상단 select date
+            var $rDate=$("#reserve_quick .r_select .r_date");
+            var $sDay=$rDate.find("a").first();
+            var $go=$rDate.find("a").last();
+            var $change;
+
+            $sDay.on("click",function (e){
+                e.preventDefault();
+                $(this).next().stop().slideDown();
+                $(this).next().on("mouseleave",function (){
+                    $(this).stop().slideUp();
+                });
+            });
+
+            $rDate.find("a:first,a:last").on("blur",function(){
+                setTimeout(function  () {
+				if (!$rDate.find("a").is(":focus")) $rDate.find("ul").stop().slideUp();
+			}, 1000);
+            });
+
+            $rDate.find("ul>li>a").on("click",function(e){
+                e.preventDefault();
+                var change=$(this).text();
+                $sDay.focus().text(change).closest("a").next().stop().slideUp();
+            });
+
+
+            //상단 select cinema
             var $rCinema=$("#reserve_quick .r_select .r_cinema")
             var $rCin=$rCinema.find("a").first();
             var $rGo=$rCinema.find("a").last();
+            var $ticketC=$(".featherlight-content .r_md .r_ticket .r_t_bottom .r_t_cinema");
             var $rChange;
 
             $rCin.on("click",function (e){
@@ -249,9 +276,10 @@ $(document).ready(function()
                 e.preventDefault();
                 var rChange=$(this).text();
                 $rCin.focus().text(rChange).closest("a").next().stop().slideUp();
+                $ticketC.text(rChange);
             });
 
-    //상단 select date
+            //상단 select date
             var $rDate=$("#reserve_quick .r_select .r_date")
             var $sDay=$rDate.find("a").first();
             var $go=$rDate.find("a").last();
@@ -277,7 +305,7 @@ $(document).ready(function()
                 $sDay.focus().text(change).closest("a").next().stop().slideUp();
             });
 
-    //상단 select number
+            //상단 select number
             var $rNum=$("#reserve_quick .r_select .r_number")
             var $number=$rNum.find("a").first();
             var $go=$rNum.find("a").last();
@@ -303,10 +331,6 @@ $(document).ready(function()
 
                 $number.focus().text(change2+"명").closest("a").next().stop().slideUp();             
             }); 
-    //모달 클릭 이벤트
-            var $rModalTk=$(".featherlight-content .r_md .r_ticket");
-            var 
-
 
         
         
