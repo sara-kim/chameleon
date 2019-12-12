@@ -5,6 +5,13 @@ $(document).ready(function()
     var today = new Date();
     var date = new Date();
     var pday = ["일", "월", "화", "수", "목", "금", "토"];
+    
+    var pmon = today.getMonth()+1;
+    var pdate = today.getDate();
+    var todayDate = new Date(today.getFullYear(),today.getMonth()+1,today.getDate())
+    var compareDate = new Date(date.getFullYear(),date.getMonth()+1,date.getDate());
+    
+
 
     function prevCalendar() 
     {
@@ -14,7 +21,6 @@ $(document).ready(function()
      today = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
      buildCalendar(); //달력 cell 만들어 출력 
     }
-
     function nextCalendar() 
     {
         // 다음 달을 today에 값을 저장하고 달력에 today 넣어줌
@@ -69,21 +75,29 @@ $(document).ready(function()
          }
     }
 
-    var pmon = date.getMonth()+1;
-    var pdate = date.getDate();
+    $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 "+pday[date.getDay()]);
 
     var lastDate = new Date(today.getFullYear(),today.getMonth()+1,0);
-    $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 "+pday[date.getDay()]);
+    // 이전버튼
     $("#timeTable .printDate button").eq(1).on("click",function()
     {
         pdate--;
+        if(pdate == 0)
+        {
+            pmon--;
+            if(pmon==0)
+            pmon=12;
+            pdate=lastDate.getDate();
+        }
         $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 "+pday[date.getDay()]);
-        
     });
+
+    //다음버튼
     $("#timeTable .printDate button").eq(2).on("click", function()
     {   
     
         pdate++;
+        pday[date.getDay()+1];
         if(pdate > lastDate.getDate())
         {
             pdate=1;
@@ -136,7 +150,6 @@ $(document).ready(function()
         for(var k=0; k<24; k++)
         {
             var rand = [Math.floor(Math.random()*120)+1];
-            console.log(rand);
             $("#minimap #pSe .selSeat").eq(rand).addClass("scol");
         }
     }
