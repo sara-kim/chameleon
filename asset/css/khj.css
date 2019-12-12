@@ -89,7 +89,7 @@
 #mv_content .mv_steel .media_slider{width: 632px; height: 116px; overflow: hidden;}
 #mv_content .mv_steel .media_slider ul{margin-left: 22px;}
 #mv_content .mv_steel .media_slider ul li{float: left;}
-#mv_content .mv_steel .media_slider .visual .mv_play a{background: url("../images/movie/icon_play.png");}
+#mv_content .mv_steel .media_slider .visual .mv_play a{background: url("../images/movie/icon_play.png") no-repeat 30px 30px;}
 
     /* movie slider */
 #mv_content .mv_steel .media_slider .visual{width: 1920px !important; height: 116px;}

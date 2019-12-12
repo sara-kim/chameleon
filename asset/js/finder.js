@@ -58,13 +58,13 @@ $(document).ready(function()
         /*달력 출력*/
          for (i=1; i<=lastDate.getDate(); i++) { 
               cell = row.insertCell();
-              cell.innerHTML = i;
+              cell.innerHTML = "<button type='button'>"+i+"</button>";
               cnt = cnt + 1;
           if (cnt % 7 == 1) {
-            cell.innerHTML = "<font color=#ff0000>" + i
+            cell.innerHTML = "<button type='button'style='color:#ff0000'>" + i +"</button>"
         }    
           if (cnt%7 == 0){
-              cell.innerHTML = "<font color=#0000ff>" + i           
+              cell.innerHTML = "<button type='button'style='color:#0000ff'>" + i +"</button>"           
                row = calendar.insertRow();
           }
           if (today.getFullYear() == date.getFullYear()
@@ -75,7 +75,7 @@ $(document).ready(function()
          }
     }
 
-    $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 "+pday[date.getDay()]);
+    $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 ");
 
     var lastDate = new Date(today.getFullYear(),today.getMonth()+1,0);
     // 이전버튼
@@ -89,7 +89,7 @@ $(document).ready(function()
             pmon=12;
             pdate=lastDate.getDate();
         }
-        $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 "+pday[date.getDay()]);
+        $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 ");
     });
 
     //다음버튼
@@ -107,12 +107,13 @@ $(document).ready(function()
             pmon=1;
             
         }
-        $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 "+pday[date.getDay()]);
+        $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 ");
     });
     
     var _printCal = $(".timeTable .printDate button").eq(0);
     var _prevM = $("#calendar thead tr th").eq(0).children("button");
     var _nextM = $("#calendar thead tr th").eq(2).children("button");
+    var _clickTd = $("#calendar tbody tr td").children("button");
     _printCal.on("click",function()
     {
         buildCalendar();
@@ -133,7 +134,12 @@ $(document).ready(function()
         nextCalendar();
         return false;
     });
-
+    _clickTd.on("click",function()
+    {
+        alert();
+        
+    });
+    
     // Calendar 종료
 
     function minimap()
