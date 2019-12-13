@@ -16,7 +16,8 @@ $(document).ready(function()
     // 이전 달을 today에 값을 저장하고 달력에 today를 넣어줌
     //today.getFullYear() 현재 년도//today.getMonth() 월  //today.getDate() 일 
     //getMonth()는 현재 달을 받아 오므로 이전달을 출력하려면 -1을 해줘야함
-     today = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
+     
+    today = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
      buildCalendar(); //달력 cell 만들어 출력 
     }
     function nextCalendar() 
@@ -143,6 +144,7 @@ $(document).ready(function()
     });
     _prevM.on("click",function()
     {
+
         prevCalendar();
         return false;
     });
