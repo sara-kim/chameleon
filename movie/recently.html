@@ -14,40 +14,6 @@
     <script src="../asset/js/jquery.bxslider.min.js"></script>
     <script src="../asset/js/tab_slider.js"></script>
     <script src="../asset/js/common.js"></script>
-    <script>
-        $(document).ready(function () {
-            var tabSlider = $('.media_slider .mediSlide1, .media_slider .mediSlide2').bxSlider({
-                mode: 'horizontal', //'horizontal'(기본값), 'vertical', 'fade'
-                //auto: false,     //false(기본값), 자동실행을 원하면 추가
-                //pause: 2000,    //4000(4초 기본값), 1초 = 1000
-                //autoControls: false, //시작과 정지버튼 생성, 기본값 false
-                ariaLive: true, //스크린리더 사용자에게 변경된 정보를 알릴지 여부
-                ariaHidden: true, //보여지는 슬라이더 내요인지 여부
-                prevText: '이전 슬라이더 보기',
-                nextText: '다음 슬라이더 보기',
-                startText: '애니메이션 시작',
-                stopText: '애니메이션 정지',
-                slideWidth: 226, //한줄에 여러개 보여질때 li의 너비 축소값
-                minSlides: 3, //한줄에 보여질 최소 슬라이더 개수
-                maxSlides: 3, //한줄에 보여질 최대 슬라이더 개수
-                moveSlides: 1, //이전, 다음 클릭하면 움직일 개수
-                slideMargin: 8 //슬라이드 간의 여백
-            });
-
-            $('.bx-controls-direction a').wrap('<div class="white"></div>');
-
-            $('.tab').on('click', function () {
-                var $tg = $(this);
-                var mql = window.matchMedia("screen and (max-width: 1920, min-width: 1200");
-                mql.handle(function (e) {
-                    if (!e.matches) {
-                        slider.reloadSlider();
-                    }
-                });
-                activeOn($tg);
-            });
-        });
-    </script>
 </head>
 
 <body>
@@ -237,31 +203,16 @@
                     <h3>영상 · 스틸컷 · 포토</h3>
                     <div class="po_relat">
                         <div class="media_slider">
-                            <ul class="cle_both visual mediSlide1">
+                            <ul class="cle_both visual mediSlide0">
                                 <li class="mv_play">
-                                    <a target="_blank" href="https://youtu.be/eSEs4B4H-EA" title="82년생 김지영 예고편 영상 바로가기"><img src="../asset/images/movie/frozen_steel07.jpg" alt=""></a>
+                                    <a target="_blank" href="https://youtu.be/eSEs4B4H-EA" title="겨울왕국2 예고편 영상 바로가기"><img src="../asset/images/movie/frozen_steel07.jpg" alt="크리스토프의 썰매를 타고 산을 넘는 엘사와 안나"></a>
                                 </li>
                                 <li>
-                                    <img src="../asset/images/movie/frozen_steel08.jpg" alt="">
+                                    <img src="../asset/images/movie/frozen_steel08.jpg" alt="올라프를 품에 안고 있는 안나">
                                 </li>
                                 <li>
-                                    <img src="../asset/images/movie/frozen_steel03.jpg" alt="">
+                                    <img src="../asset/images/movie/frozen_steel03.jpg" alt="어린 엘사와 안나를 품에 안고 있는 엘사의 엄마인 이두나">
                                 </li>
-                                <!-- <li>
-                                    <img src="../asset/images/movie/frozen_steel04.jpg" alt="">
-                                </li>
-                                <li>
-                                    <img src="../asset/images/movie/frozen_steel05.jpg" alt="">
-                                </li>
-                                <li>
-                                    <img src="../asset/images/movie/frozen_steel06.jpg" alt="">
-                                </li>
-                                <li>
-                                    <img src="../asset/images/movie/frozen_steel07.jpg" alt="">
-                                </li>
-                                <li>
-                                    <img src="../asset/images/movie/frozen_steel08.jpg" alt="">
-                                </li> -->
                             </ul>
                         </div>
                     </div>
@@ -288,24 +239,92 @@
                     <h3>영상 · 스틸컷 · 포토</h3>
                     <div class="po_relat">
                         <div class="media_slider">
-                            <ul class="cle_both visual mediSlide2">
+                            <ul class="cle_both visual mediSlide1">
                                 <li class="mv_play">
                                     <a target="_blank" href="https://youtu.be/Gz0ZeY1U4vY" title="82년생 김지영 예고편 영상 바로가기"><img
-                                            src="../asset/images/movie/kim_steel01.jpg" alt=""></a>
+                                            src="../asset/images/movie/kim_steel01.jpg" alt="지영의 뺨을 어루만져주는 지영의 엄마"></a>
                                 </li>
                                 <li>
-                                    <img src="../asset/images/movie/kim_steel02.jpg" alt="">
+                                    <img src="../asset/images/movie/kim_steel02.jpg" alt="쓸쓸한 분위기로 벤치에 앉아 통화하며 발로 유모차를 미는 지영">
                                 </li>
                                 <li>
-                                    <img src="../asset/images/movie/kim_steel03.jpg" alt="">
+                                    <img src="../asset/images/movie/kim_steel03.jpg" alt="아이를 돌보고 있는 대현">
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="tabpanel" role="tabpanel" id="tabpanel3" aria-labelledby="tab3"></div>
-            <div class="tabpanel" role="tabpanel" id="tabpanel4" aria-labelledby="tab4"></div>
+            <div class="tabpanel cle_both po_relat" role="tabpanel" id="tabpanel3" aria-labelledby="tab3">
+                <img src="../asset/images/movie/liar_poster.jpg" alt="">
+                <div class="mv_maintxt f_l po_relat">
+                    <span>스릴러</span>
+                    <h4>굿 라이어</h4>
+                    <p class="mv_italic">평생을 공들인 계획, 드디어 실행에 나선다! <br>거짓말은 완벽하게, 복수는 우아하게!</p>
+                    <p>부유한 미망인 ‘베티(헬렌 미렌)’는 온라인 데이트 사이트에서 <br>‘로이(이안 맥켈런)’를 만나고, 두 사람은 서로를 의지하며 좋은 관계를 만들어나간다.</p>
+                    <p>하지만 사실 로이는 베티의 돈을 노리고 의도적으로 접근했던 것. <br>이를 모르는 베티는 로이가 제안한대로 공동 계좌를 만들어 본인의 재산과 <br>로이의 재산을 합하는 데 동의하고, 두 사람은 베를린으로 여행을 떠난다.</p>
+                    <p>그 곳에서 베티는 로이의 정체를 알게 되고 로이에게 복수를 감행하는데…</p>
+                    <div class="mv_efc po_absol">
+                        <a href="" class="boder_bx">배우 &amp; 제작진</a>
+                        <a href="" class="boder_bx">리뷰</a>
+                        <a href="" class="boder_bx">예매</a>
+                    </div>
+                </div>
+                <div class="mv_steel f_l po_absol">
+                    <h3>영상 · 스틸컷 · 포토</h3>
+                    <div class="po_relat">
+                        <div class="media_slider">
+                            <ul class="cle_both visual mediSlide2">
+                                <li class="mv_play">
+                                    <a target="_blank" href="https://youtu.be/HbhUxz4siEs" title="굿라이어 예고편 영상 바로가기"><img
+                                            src="../asset/images/movie/liar_steel01.jpg" alt="마주보고 이야기하는 로이와 베티"></a>
+                                </li>
+                                <li>
+                                    <img src="../asset/images/movie/liar_steel02.jpg" alt="로이의 머리를 손질해주는 베티">
+                                </li>
+                                <li>
+                                    <img src="../asset/images/movie/liar_steel03.jpg" alt="사람을 두고 대화하고 있는 로이와 베티">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabpanel cle_both po_relat" role="tabpanel" id="tabpanel4" aria-labelledby="tab4">
+                <img src="../asset/images/movie/little_poster.jpg" alt="">
+                <div class="mv_maintxt f_l po_relat">
+                    <span>드라마</span>
+                    <h4>감쪽같은 그녀</h4>
+                    <p>&ldquo;초면에 실례하겠습니다~&rdquo; <br>72살 나 홀로 라이프를 즐기는 &lsquo;말순&rsquo; 할매의 인생에 듣도 보도 못한 손녀(?)가 나타났다!</p>
+                    <p>특기는 자수, 용돈 벌이는 그림 맞추기(?) <br>동네를 주름 잡으며 나 혼자 잘 살고 있던 &lsquo;말순&rsquo; 할매 앞에 다짜고짜 자신을 <br>손녀라고 소개하는 열두 살 &lsquo;공주&rsquo;가 갓난 동생 &lsquo;진주&rsquo;까지 업고 찾아온다.</p>
+                    <p>외모, 성격, 취향까지 모든 것이 극과 극인 &lsquo;말순&rsquo;과 &lsquo;공주&rsquo;는 <br>티격태격 하루도 조용할 날 없이 지내지만, 필요한 순간엔 든든한 내 편이 되어주며  <br>서로에게 특별한 존재가 되어간다. <br>하지만 &lsquo;말순&rsquo;은 시간이 갈수록 &lsquo;공주&rsquo;와의 동거생활이
+                        아득하고 깜깜하게만 느껴지는데…</p>
+                    <div class="mv_efc po_absol">
+                        <a href="" class="boder_bx">배우 &amp; 제작진</a>
+                        <a href="" class="boder_bx">리뷰</a>
+                        <a href="" class="boder_bx">예매</a>
+                    </div>
+                </div>
+                <div class="mv_steel f_l po_absol">
+                    <h3>영상 · 스틸컷 · 포토</h3>
+                    <div class="po_relat">
+                        <div class="media_slider">
+                            <ul class="cle_both visual mediSlide3">
+                                <li class="mv_play">
+                                    <a target="_blank" href="https://youtu.be/i43oWv6jWJ4" title="감쪽같은 그녀 예고편 영상 바로가기"><img
+                                            src="../asset/images/movie/little_steel01.jpg" alt="마루에 앉아 웃고 있는 말순과 공주"></a>
+                                </li>
+                                <li>
+                                    <img src="../asset/images/movie/little_steel02.jpg" alt="마루에 있는 공주와 바느질 하는 말순">
+                                </li>
+                                <li>
+                                    <img src="../asset/images/movie/little_steel03.jpg" alt="탁 트인 평상에 앉아 친구들과 화투를 치는 말순">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </article>
 
         <article id="mv_three">
@@ -319,7 +338,7 @@
         <footer id="footer">
             <div class="footerbox">
                 <h1 class="logo">
-                    <a href="">
+                    <a href="../index.html">
                         <img src="../asset/images/common/logo_footer.svg" alt="카멜레온시네마 로고">
                     </a>
                 </h1>
@@ -327,7 +346,7 @@
                     <li>이용약관</li>
                     <li>채용정보</li>
                     <li>회사소개</li>
-                    <li><a href="../notice/qna/">고객센터</a></li>
+                    <li><a href="../notice/faq.html">고객센터</a></li>
                     <li>제휴/광고/임대문의</li>
                     <li>개인정보처리방침</li>
                 </ul>
