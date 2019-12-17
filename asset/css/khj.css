@@ -34,7 +34,7 @@
 #join tr{font-size: 20px; height: 85px; text-align: left;}
 #join tr input[type="text"], #join tr input[type="password"]{width: 206px; padding: 3px 0 3px 10px; font-size: 16px;}
 #join tr select{font-size: 16px; height: 32px; padding: 0 3px 2px 4.5px;}
-#join .tr5 .jo_f_w{width: 50px;}
+#join .tr5 .jo_f_w{width: 47px;}
 #join tr th{width: 130px; background: url("../images/member/icon_check.jpg") no-repeat 0 18px;}
 #join .tr4 th:nth-child(3), #join .tr5 th:nth-child(3){background-image: none;}
 #join tr th:nth-child(1){padding-left: 8px; background-position-x: 0px;}

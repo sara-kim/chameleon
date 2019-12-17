@@ -16,6 +16,12 @@
     <script src="../asset/js/tab.js"></script>
     <script src="../asset/js/common.js"></script>
     <script>
+    var empJ = /\s/g; // 공백체크
+	var nameJ = /^[가-힣]{2,6}$/;  // 이름 정규식
+	var mailJ = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i; // 이메일 검사 정규식
+	var phoneJ = /^01([0|1|6|7|8|9]?)?([0-9]{3,4})?([0-9]{4})$/; // 휴대폰 번호 정규식
+
+
         $(document).ready(function () {
             var _boardList = $("#boardArea .boardList");
             _boardList.find("a").on("click", function () {
@@ -66,21 +72,21 @@
         <div id="sitemap" class="po_relat">
             <div class="sitemap_box po_absol">
                 <ul class="s_tit">
-                    <li><a href="">영화</a>
+                    <li><a href="../movie/recently.html">영화</a>
                         <ul>
                             <li><a href="">박스오피스</a></li>
                             <li><a href="../movie/recently.html">최신개봉작</a></li>
                             <li><a href="">상영예정작</a></li>
                         </ul>
                     </li>
-                    <li><a href="">예매</a>
+                    <li><a href="../reserve/r_quick.html">예매</a>
                         <ul>
                             <li><a href="../reserve/r_quick.html">빠른예매</a></li>
                             <li><a href="">미개봉 선예매</a></li>
                             <li><a href="">예매확인</a></li>
                         </ul>
                     </li>
-                    <li><a href="">극장</a>
+                    <li><a href="../cinema/c_finder.html">극장</a>
                         <ul>
                             <li><a href="../cinema/c_finder.html">영화관 찾기</a></li>
                             <li><a href="">자주가는 영화관</a></li>
@@ -104,9 +110,9 @@
                     </li>
                 </ul>
                 <ul class="b_tit">
-                    <li><a href="">멤버십</a>
+                    <li><a href="../membership/ms_guide.html">멤버십</a>
                         <ul>
-                            <li><a href="../ms_guaid.html">멤버십 안내</a></li>
+                            <li><a href="../membership/ms_guide.html">멤버십 안내</a></li>
                             <li><a href="">멤버십 카드</a></li>
                             <li><a href="">제휴카드</a></li>
                             <li><a href="">VIP</a></li>
@@ -121,7 +127,7 @@
                             <li><a href="">본사위치</a></li>
                         </ul>
                     </li>
-                    <li><a href="">회원서비스</a>
+                    <li><a href="../member/join.html">회원서비스</a>
                         <ul>
                             <li><a href="../member/join.html">회원가입</a></li>
                             <li><a href="">아이디 | 패스워드 찾기</a></li>
@@ -129,7 +135,7 @@
                             <li><a href="">회원탈퇴</a></li>
                         </ul>
                     </li>
-                    <li><a href="">고객센터</a>
+                    <li><a href="../notice/faq.html">고객센터</a>
                         <ul>
                             <li><a href="../notice/faq.html">자주 묻는 질문</a></li>
                             <li><a href="">공지사항</a></li>

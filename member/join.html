@@ -71,21 +71,21 @@
         <div id="sitemap" class="po_relat">
             <div class="sitemap_box po_absol">
                 <ul class="s_tit">
-                    <li><a href="">영화</a>
+                    <li><a href="../movie/recently.html">영화</a>
                         <ul>
                             <li><a href="">박스오피스</a></li>
                             <li><a href="../movie/recently.html">최신개봉작</a></li>
                             <li><a href="">상영예정작</a></li>
                         </ul>
                     </li>
-                    <li><a href="">예매</a>
+                    <li><a href="../reserve/r_quick.html">예매</a>
                         <ul>
                             <li><a href="../reserve/r_quick.html">빠른예매</a></li>
                             <li><a href="">미개봉 선예매</a></li>
                             <li><a href="">예매확인</a></li>
                         </ul>
                     </li>
-                    <li><a href="">극장</a>
+                    <li><a href="../cinema/c_finder.html">극장</a>
                         <ul>
                             <li><a href="../cinema/c_finder.html">영화관 찾기</a></li>
                             <li><a href="">자주가는 영화관</a></li>
@@ -109,9 +109,9 @@
                     </li>
                 </ul>
                 <ul class="b_tit">
-                    <li><a href="">멤버십</a>
+                    <li><a href="../membership/ms_guide.html">멤버십</a>
                         <ul>
-                            <li><a href="../ms_guide.html">멤버십 안내</a></li>
+                            <li><a href="../membership/ms_guide.html">멤버십 안내</a></li>
                             <li><a href="">멤버십 카드</a></li>
                             <li><a href="">제휴카드</a></li>
                             <li><a href="">VIP</a></li>
@@ -126,7 +126,7 @@
                             <li><a href="">본사위치</a></li>
                         </ul>
                     </li>
-                    <li><a href="">회원서비스</a>
+                    <li><a href="../member/join.html">회원서비스</a>
                         <ul>
                             <li><a href="../member/join.html">회원가입</a></li>
                             <li><a href="">아이디 | 패스워드 찾기</a></li>
@@ -134,11 +134,11 @@
                             <li><a href="">회원탈퇴</a></li>
                         </ul>
                     </li>
-                    <li><a href="">고객센터</a>
+                    <li><a href="../notice/faq.html">고객센터</a>
                         <ul>
                             <li><a href="../notice/faq.html">자주 묻는 질문</a></li>
                             <li><a href="">공지사항</a></li>
-                            <li><a href="">문의하기</a></li>
+                            <li><a href="../notice/question.html">문의하기</a></li>
                             <li><a href="">분실문 문의 및 접수</a></li>
                             <li><a href="">단체 및 대관문의</a></li>
                         </ul>
@@ -431,7 +431,7 @@
                         <tbody id="join">
                             <tr class="tr1">
                                 <th id="join_uid" scope="row">
-                                    <label for="uid">아이디</label>
+                                    <label for="uid">아이디<span class="hide">필수항목</span></label>
                                 </th>
                                 <td headers="join_uid" colspan="3">
                                     <input type="text" id="uid" name="uid" maxlength="12">
@@ -440,14 +440,14 @@
                             </tr>
                             <tr class="tr2">
                                 <th scope="row">
-                                    <label for="upw">비밀번호</label>
+                                    <label for="upw">비밀번호<span class="hide">필수항목</span></label>
                                 </th>
                                 <td>
                                     <input type="password" id="upw" name="upw" minlength="6" maxlength="12">
                                     <p class="jo_fz">영어와 숫자로 6~12글자를 통해 구성해주세요.</p>
                                 </td>
                                 <th scope="row">
-                                    <label for="upwchk">비밀번호 확인</label>
+                                    <label for="upwchk">비밀번호 확인<span class="hide">필수항목</span></label>
                                 </th>
                                 <td>
                                     <input type="password" id="upwchk" name="upwchk" minlength="6" maxlength="12">
@@ -455,7 +455,7 @@
                             </tr>
                             <tr class="tr3">
                                 <th scope="row">
-                                    생년월일
+                                    생년월일<span class="hide">필수항목</span>
                                 </th>
                                 <td>
                                     <select id="year" name="year" title="태어난 년"></select>
@@ -466,7 +466,7 @@
                                     <label for="day" class="jo_fz">일</label>
                                 </td>
                                 <th scope="row">
-                                    성별
+                                    성별<span class="hide">필수항목</span>
                                 </th>
                                 <td>
                                     <input type="radio" id="gd_man" name="gender" value="남" checked>
@@ -479,7 +479,7 @@
                             </tr>
                             <tr class="tr4">
                                 <th scope="row">
-                                    <label for="uname">이름</label>
+                                    <label for="uname">이름<span class="hide">필수항목</span></label>
                                 </th>
                                 <td>
                                     <input type="text" id="uname" maxlength="8">
@@ -493,13 +493,13 @@
                             </tr>
                             <tr class="tr5">
                                 <th scope="row">
-                                    <label for="unumber1">휴대폰</label>
+                                    <label for="unumber1">휴대폰<span class="hide">필수항목</span></label>
                                 </th>
                                 <td>
                                     <input title="휴대폰 앞자리" type="text" id="unumber1" class="jo_f_w" maxlength="3">
-                                    <label for="unumber2">-</label>
+                                    <span>-</span>
                                     <input title="휴대폰 중간자리" type="text" id="unumber2" class="jo_f_w" maxlength="4">
-                                    <label for="unumber3">-</label>
+                                    <span>-</span>
                                     <input title="휴대폰 마지막자리" type="text" id="unumber3" class="jo_f_w" maxlength="4">
                                     <button type="button" class="boder_bx">본인인증</button>
                                     <p>

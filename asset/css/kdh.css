@@ -572,7 +572,8 @@ input[type="file"]
     padding-bottom : 80px;
 }
 .timeTable .printDate button img,
-.timeTable .printDate span
+.timeTable .printDate span,
+.timeTable .printDate .pDate > *
 {
     vertical-align : middle;
 }
@@ -670,10 +671,6 @@ input[type="file"]
 {
     font-size : 20px;
     height : 30px;
-}
-.mvListArea .mvInfo .room span
-{
-    
 }
 .mvListArea .mvTime
 {
