@@ -57,7 +57,10 @@ $(document).ready(function()
         /*달력 출력*/
          for (i=1; i<=lastDate.getDate(); i++) { 
               cell = row.insertCell();
-              cell.innerHTML = "<button type='button'>"+i+"</button>";
+              if(i>=today.getDate())
+                  cell.innerHTML = "<button type='button'>"+i+"</button>";
+              else
+                  cell.innerHTML = "<button type='button' disabled='true'>"+i+"</button>";
               cnt = cnt + 1;
           if (cnt % 7 == 1) {
             cell.innerHTML = "<button type='button'style='color:#ff0000'>" + i +"</button>"
@@ -81,6 +84,7 @@ $(document).ready(function()
     // 달력 td 클릭시 이벤트 발생
     $(document).on('click', '#calendar tr td button', function () 
     {
+        $(this).closest(".timeTable").find(".prevBtn").attr("disabled",false);
         var pCal = $(".timeTable .printDate button").eq(0)
         $(this).closest(".timeTable").find(".printDate button").eq(0).toggleClass("active");
         if(pCal.hasClass("active"))
@@ -98,6 +102,7 @@ $(document).ready(function()
     //다음버튼
     $("#timeTable .printDate button").eq(2).on("click", function()
     {   
+        $(this).siblings("button:disabled").attr("disabled",false);
         var chkday = parseInt($("#timeTable .printDate .pDate .day").text())
         if(pdate != chkday) pdate = chkday;
 
@@ -119,13 +124,11 @@ $(document).ready(function()
     });
 
     // 이전버튼
-    // 막힌부분 이전버튼 클릭 chkNumber로 제어해서 문제생성되는거같음
-    // chkNumber가 0이 되었을때 ++ 해주는 구문추가(어디에?)
     $("#timeTable .printDate button").eq(1).on("click",function()
     {
         var chkday = parseInt($("#timeTable .printDate .pDate .day").text())
         if(pdate != chkday) pdate = chkday;
-        if(chkNumber==0)
+        if(today.getDate()==chkday)
         {
             $(this).attr("disabled",true);
         }
@@ -133,7 +136,7 @@ $(document).ready(function()
         {
             pdate--;
             chkNumber--;
-            $(this).attr("disabled",false);
+            
         }
         
         if(pdate == 0)
